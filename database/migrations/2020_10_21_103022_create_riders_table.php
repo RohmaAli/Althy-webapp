@@ -14,7 +14,11 @@ class CreateRidersTable extends Migration
     public function up()
     {
         Schema::create('riders', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->boolean('cnic')->nullable();
+            $table->string('phone')->nullable();
             $table->timestamps();
         });
     }
