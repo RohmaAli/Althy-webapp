@@ -17,6 +17,14 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('customer_id')->nullable();
             $table->bigInteger('rider_id')->nullable();
+            $table->string('Longitude')->nullable();
+            $table->string('Latitude')->nullable();
+            $table->string('OrderType')->nullable();
+            $table->string('OrderStatus')->nullable();
+            $table->string('DeliveryType')->nullable();
+            $table->string('Transcript')->nullable();
+            $table->string('Source')->nullable();
+
 
             $table->timestamps();
         });
