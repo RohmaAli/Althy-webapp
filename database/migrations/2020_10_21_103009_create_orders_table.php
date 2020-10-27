@@ -16,7 +16,6 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('customer_id')->nullable();
-            $table->bigInteger('rider_id')->nullable();
             $table->string('Longitude')->nullable();
             $table->string('Latitude')->nullable();
             $table->string('OrderType')->nullable();
@@ -24,7 +23,9 @@ class CreateOrdersTable extends Migration
             $table->string('DeliveryType')->nullable();
             $table->string('Transcript')->nullable();
             $table->string('Source')->nullable();
-
+            $table->string('AdminNotes')->nullable();
+            $table->string('Address')->nullable();
+            $table->bigInteger('rider_id')->nullable();
 
             $table->timestamps();
         });

@@ -17,8 +17,10 @@ class CreateCustomersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name')->nullable();
             $table->string('email')->nullable();
-            $table->boolean('isActive')->nullable();
             $table->string('phone')->nullable();
+            $table->string('address')->nullable();
+            $table->boolean('isActive')->nullable();
+            $table->string('OneSignalID')->nullable();
 
             $table->timestamps();
         });
