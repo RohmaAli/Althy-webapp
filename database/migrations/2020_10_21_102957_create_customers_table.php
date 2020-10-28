@@ -21,7 +21,6 @@ class CreateCustomersTable extends Migration
             $table->string('address')->nullable();
             $table->boolean('isActive')->nullable();
             $table->string('OneSignalID')->nullable();
-
             $table->timestamps();
         });
     }
