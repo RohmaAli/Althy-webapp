@@ -434,33 +434,33 @@ class WebController extends Controller
 
     }
 
-    public function labtests(Request $request)
-    {
-      $menuCategories = self::makeMenu();
-      $data = Services::orderBy('Name', 'ASC')->paginate(24);
-      $hasConsumer = false;
-      $consumer = null;
-      if($request->hasCookie('ConsumerID'))
-      {
-          $hasConsumer = true;
-          $consumer = Customer::find($request->cookie('ConsumerID'));
-      }
-      return view('Site.labtests', compact('data', 'hasConsumer', 'menuCategories', 'consumer'));
-    }
+    // public function labtests(Request $request)
+    // {
+    //   $menuCategories = self::makeMenu();
+    //   $data = Services::orderBy('Name', 'ASC')->paginate(24);
+    //   $hasConsumer = false;
+    //   $consumer = null;
+    //   if($request->hasCookie('ConsumerID'))
+    //   {
+    //       $hasConsumer = true;
+    //       $consumer = Customer::find($request->cookie('ConsumerID'));
+    //   }
+    //   return view('Site.labtests', compact('data', 'hasConsumer', 'menuCategories', 'consumer'));
+    // }
 
-    public function labtestSearch(Request $request)
-    {
-      $menuCategories = self::makeMenu();
-      $data = Services::where('Name', 'LIKE', '%'.$request->Search.'%')->orderBy('Name', 'ASC')->paginate(24);
-      $hasConsumer = false;
-      $consumer = null;
-      if($request->hasCookie('ConsumerID'))
-      {
-          $hasConsumer = true;
-          $consumer = Customer::find($request->cookie('ConsumerID'));
-      }
-      return view('Site.labtests', compact('data', 'hasConsumer', 'menuCategories', 'consumer'));
-    }
+    // public function labtestSearch(Request $request)
+    // {
+    //   $menuCategories = self::makeMenu();
+    //   $data = Services::where('Name', 'LIKE', '%'.$request->Search.'%')->orderBy('Name', 'ASC')->paginate(24);
+    //   $hasConsumer = false;
+    //   $consumer = null;
+    //   if($request->hasCookie('ConsumerID'))
+    //   {
+    //       $hasConsumer = true;
+    //       $consumer = Customer::find($request->cookie('ConsumerID'));
+    //   }
+    //   return view('Site.labtests', compact('data', 'hasConsumer', 'menuCategories', 'consumer'));
+    // }
 
     public function sale(Request $request)
     {

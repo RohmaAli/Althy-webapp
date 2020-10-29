@@ -21,8 +21,8 @@ class CreateProductsTable extends Migration
             $table->double('sale_price')->nullable();
             $table->double('actual_price')->nullable();
             $table->timestamps();
-            $table->string('description')->nullable();
             $table->tinyInteger('isFeatured')->nullable();
+            $table->string('description')->nullable();
             $table->bigInteger('product_category_id')->nullable();
 
 
