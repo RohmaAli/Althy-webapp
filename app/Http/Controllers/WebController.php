@@ -81,6 +81,7 @@ class WebController extends Controller
             $prod->Category = ProductCategory::find($prod->Category1)->Title;
           
         }
+        
         else {
           $prod->Category = '';
         }
@@ -1303,7 +1304,7 @@ class WebController extends Controller
         return redirect()->route('verifyPhone');
       }
 
-      
+
       return redirect()->back()->with('error', 'Invalid Username / Password!');
     }
 
